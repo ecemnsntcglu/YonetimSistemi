@@ -109,7 +109,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AdminGiris";
             this.Text = "Admin Girişi";
-            this.Load += new System.EventHandler(this.AdminGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

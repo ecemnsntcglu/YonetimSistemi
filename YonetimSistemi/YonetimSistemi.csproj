@@ -94,6 +94,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bilet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bilet.Designer.cs">
+      <DependentUpon>Bilet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BiletOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiletOnay.Designer.cs">
+      <DependentUpon>BiletOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="boolean.cs" />
+    <Compile Include="Etkinlik_Bilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etkinlik_Bilgi.Designer.cs">
+      <DependentUpon>Etkinlik_Bilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtkinlikEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtkinlikEkle.Designer.cs">
+      <DependentUpon>EtkinlikEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etkinlikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etkinlikler.Designer.cs">
+      <DependentUpon>Etkinlikler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Film.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +177,24 @@
     </Compile>
     <EmbeddedResource Include="AdminGiris.resx">
       <DependentUpon>AdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bilet.resx">
+      <DependentUpon>Bilet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiletOnay.resx">
+      <DependentUpon>BiletOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etkinlik_Bilgi.resx">
+      <DependentUpon>Etkinlik_Bilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtkinlikEkle.resx">
+      <DependentUpon>EtkinlikEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etkinlikler.resx">
+      <DependentUpon>Etkinlikler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Film.resx">
       <DependentUpon>Film.cs</DependentUpon>

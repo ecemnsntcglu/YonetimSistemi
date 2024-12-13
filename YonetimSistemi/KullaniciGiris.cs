@@ -1,12 +1,6 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace YonetimSistemi
@@ -17,7 +11,7 @@ namespace YonetimSistemi
         {
             InitializeComponent();
         }
-        NpgsqlConnection baglanti = new NpgsqlConnection("server=localHost; port=5432; Database=dbYonetim; user ID=postgres; password=22181617007");
+        NpgsqlConnection baglanti = new NpgsqlConnection("server=localHost; port=5432; Database=dbYonetim; user ID=postgres; password=iK663746");
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
             try
@@ -70,8 +64,12 @@ namespace YonetimSistemi
                 {
                     baglanti.Open();
                 }
+                if (string.IsNullOrWhiteSpace(txtKullanici.Text) || string.IsNullOrWhiteSpace(txtSifre.Text))
+                {
+                    MessageBox.Show("Lütfen tüm alanları doldurun.");
+                    return;
+                }
 
-                // Kullanıcı adı kontrolü
                 string kontrol = "SELECT username FROM kullanicilar WHERE username = @username";
                 using (NpgsqlCommand komutKontrol = new NpgsqlCommand(kontrol, baglanti))
                 {
@@ -82,7 +80,7 @@ namespace YonetimSistemi
                         if (oku.Read()) // username zaten var
                         {
                             MessageBox.Show("Bu kullanıcı adı zaten alınmış!");
-                            return; 
+                            return;
                         }
                     }
                 }
