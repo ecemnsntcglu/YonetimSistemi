@@ -41,7 +41,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(39, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(60, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 240);
             this.pictureBox1.TabIndex = 0;
@@ -55,7 +55,6 @@
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ımageList1
             // 
@@ -66,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(366, 48);
+            this.panel1.Location = new System.Drawing.Point(390, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 240);
             this.panel1.TabIndex = 3;

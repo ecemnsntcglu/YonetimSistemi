@@ -2,9 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Reflection.Emit;
 using System.Windows.Forms;
-using static System.Collections.Specialized.BitVector32;
+
 
 namespace YonetimSistemi
 {
@@ -281,9 +280,6 @@ namespace YonetimSistemi
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

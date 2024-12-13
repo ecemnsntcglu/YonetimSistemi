@@ -56,6 +56,7 @@ namespace YonetimSistemi
         {
             Bilet biletForm = new Bilet(_etkinlikAdi,_etkinlik_tur, _tarih, _sehir,  _salonAdi);
             biletForm.ShowDialog();
+            this.Hide();
             
         }
 
