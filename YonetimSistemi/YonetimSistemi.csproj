@@ -131,12 +131,6 @@
     <Compile Include="Etkinlikler.Designer.cs">
       <DependentUpon>Etkinlikler.cs</DependentUpon>
     </Compile>
-    <Compile Include="Film.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Film.Designer.cs">
-      <DependentUpon>Film.cs</DependentUpon>
-    </Compile>
     <Compile Include="GirisPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +142,6 @@
     </Compile>
     <Compile Include="AdminGiris.Designer.cs">
       <DependentUpon>AdminGiris.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Konser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Konser.Designer.cs">
-      <DependentUpon>Konser.cs</DependentUpon>
     </Compile>
     <Compile Include="KullaniciGiris.cs">
       <SubType>Form</SubType>
@@ -169,12 +157,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tiyatro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tiyatro.Designer.cs">
-      <DependentUpon>Tiyatro.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdminGiris.resx">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,14 +178,8 @@
     <EmbeddedResource Include="Etkinlikler.resx">
       <DependentUpon>Etkinlikler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Film.resx">
-      <DependentUpon>Film.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GirisPaneli.resx">
       <DependentUpon>GirisPaneli.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Konser.resx">
-      <DependentUpon>Konser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciGiris.resx">
       <DependentUpon>KullaniciGiris.cs</DependentUpon>
@@ -220,9 +196,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Tiyatro.resx">
-      <DependentUpon>Tiyatro.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
