@@ -151,7 +151,7 @@ namespace YonetimSistemi
             string query = @"
         SELECT b.bilet_id,k.sira_no, k.koltuk_no, b.durum
         FROM biletler b
-        JOIN koltuk_duzeni k ON b.koltuk_id = k.koltuk_id
+        JOIN koltuk_duzeni k ON b.koltuk_id = k.koltuk_id and b.salon_no=k.salon_no
         WHERE b.etkinlik_id = (SELECT etkinlik_id FROM etkinlikler WHERE ad = @_etkinlikAdi)
           AND k.bolum = @section
         ORDER BY k.sira_no, k.koltuk_no";
@@ -168,7 +168,7 @@ namespace YonetimSistemi
 
                         using (var reader = cmd.ExecuteReader())
                         {
-                            int posX = 15, posY = 30, buttonSize = 30;
+                            int posX = 0, posY = 30, buttonSize = 34;
 
                             while (reader.Read())
                             {
@@ -182,18 +182,18 @@ namespace YonetimSistemi
                                 { Name = $"{_bilet_id }",
                                     Width = buttonSize,
                                     Height = buttonSize,
-                                    Text = $"{siraNo}-{koltukNo}",
+                                    Text = $"{siraNo}\n{koltukNo}",
+                                    Font = new Font(label1.Font.FontFamily, 7, FontStyle.Bold),
                                     BackColor = durum ? Color.Red : Color.Green,
                                     Location = new Point(posX, posY)
                                 };
-
                                 koltukButton.Click += KoltukButton_Click;
                                 panel2.Controls.Add(koltukButton);
 
                                 posX += buttonSize + 1;
                                 if (posX + buttonSize > panel2.ClientSize.Width)
                                 {
-                                    posX = 15;
+                                    posX = 0;
                                     posY += buttonSize + 1;
                                 }
                             }
@@ -213,9 +213,9 @@ namespace YonetimSistemi
                             {
                                 Width = 170,
                                 Height = 30,
-                                Text = "SEÇİM PANELİNE DÖN",
+                                Text = "SEÇİMİ ONAYLA",
                                 BackColor = Color.LightGray,
-                                Location = new Point(posX+5, posY)
+                                Location = new Point(posX+175, posY)
                             };
                             geri.Click += geri_Click;
                             ileri.Click += ileri_Click;

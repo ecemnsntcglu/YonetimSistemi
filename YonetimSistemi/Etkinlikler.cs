@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace YonetimSistemi
@@ -27,7 +28,7 @@ namespace YonetimSistemi
             {
                 Dock = DockStyle.Fill,
                 AutoScroll = true,
-                FlowDirection = FlowDirection.TopDown,
+                FlowDirection = FlowDirection.LeftToRight,
                 WrapContents = false
             };
             this.Controls.Add(_panel);
@@ -61,6 +62,8 @@ namespace YonetimSistemi
                             string salonAdi = reader["salon_ad"].ToString();
                             decimal enDusukFiyat = reader.GetDecimal(reader.GetOrdinal("min_fiyat"));
                             CreateEventButton(etkinlikAdi, tarih, sehir, resimYolu, salonAdi, enDusukFiyat);
+                           
+
                         }
                     }
                 }
@@ -69,10 +72,11 @@ namespace YonetimSistemi
 
         private void CreateEventButton(string etkinlikAdi, string tarih, string sehir, string resimYolu, string salonAdi, decimal enDusukFiyat)
         {
+
             Button eventButton = new Button
             {
-                Width = 110,
-                Height = 150,
+                Width = 150,
+                Height = 200,
                 Tag = new { etkinlikAdi, tarih, sehir, resimYolu, salonAdi, enDusukFiyat }
             };
 
@@ -82,10 +86,12 @@ namespace YonetimSistemi
                 eventButton.BackgroundImageLayout = ImageLayout.Stretch;
             }
 
-            Label label = new Label
+            System.Windows.Forms.Label label = new System.Windows.Forms.Label
             {
                 Text = $"{etkinlikAdi}\n{tarih}\n{sehir}\nSalon: {salonAdi}\nFiyat: {enDusukFiyat:C}",
-                AutoSize = true,
+                Width = 150,
+                Height = 50,
+                Font = new System.Drawing.Font("Arial", 7),
                 TextAlign = ContentAlignment.MiddleCenter
             };
 
@@ -93,9 +99,10 @@ namespace YonetimSistemi
 
             FlowLayoutPanel container = new FlowLayoutPanel
             {
-                Width = 200,
-                Height = 250,
-                FlowDirection = FlowDirection.TopDown
+                Width = 160,
+                Height = 260,
+             FlowDirection = FlowDirection.TopDown,
+               
             };
 
             container.Controls.Add(eventButton);
