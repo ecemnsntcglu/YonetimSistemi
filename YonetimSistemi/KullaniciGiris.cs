@@ -26,7 +26,7 @@ namespace YonetimSistemi
                     string storedPassword = oku["password"].ToString();
                     if (storedPassword == txtSifre.Text)
                     {
-                        MessageBox.Show("Giriş başarılı!");
+                       
                         Menu menu = new Menu();
                         menu.Show();
                         this.Hide();

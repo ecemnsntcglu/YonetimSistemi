@@ -94,12 +94,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminMenu.Designer.cs">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bilet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +125,12 @@
     <Compile Include="Etkinlikler.Designer.cs">
       <DependentUpon>Etkinlikler.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GirisPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +160,6 @@
     <EmbeddedResource Include="AdminGiris.resx">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminMenu.resx">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bilet.resx">
       <DependentUpon>Bilet.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Etkinlikler.resx">
       <DependentUpon>Etkinlikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GirisPaneli.resx">
       <DependentUpon>GirisPaneli.cs</DependentUpon>
