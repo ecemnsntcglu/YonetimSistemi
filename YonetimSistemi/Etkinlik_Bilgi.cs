@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,12 +40,10 @@ namespace YonetimSistemi
         private void LoadBiletDetails()
         {
             this.Text = $"Bilet - {_etkinlikAdi} - {_tarih}";
-
-            // Mevcut label1'i kullanarak etkinlik bilgilerini gösterme
             label1.Text = $"Etkinlik: {_etkinlikAdi}\nTarih: {_tarih}\nŞehir: {_sehir}\nSalon: {_salonAdi}\nEn Düşük Fiyat: {_enDusukFiyat:C}";
             label1.Font = new Font(label1.Font.FontFamily, 14, FontStyle.Bold);
 
-            // Mevcut pictureBox1'i kullanarak resmi gösterme
+            
             if (File.Exists(_resimYolu))
             {
                 pictureBox1.Image = Image.FromFile(_resimYolu);
@@ -60,8 +59,11 @@ namespace YonetimSistemi
             
         }
 
-       
-
-        
+        private void btn_geri_Click(object sender, EventArgs e)
+        {
+            Etkinlikler etk = new Etkinlikler();
+            etk.Show();
+            this.Close();
+        }
     }
 }

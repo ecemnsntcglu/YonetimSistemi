@@ -30,13 +30,22 @@ namespace YonetimSistemi
         private void Button_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
-            string filterCriteria = clickedButton.Text.ToLower();
-            Etkinlikler etkinlikler = new Etkinlikler(filterCriteria);
+            string filterCriteria = clickedButton.Text;
+            GlobalVariables.filterCriteria = filterCriteria;
+            
+            Etkinlikler etkinlikler = new Etkinlikler();
             etkinlikler.Show();
 
 
 
 
+        }
+
+        private void btn_cikis_Click(object sender, EventArgs e)
+        {
+            GirisPaneli giris=new GirisPaneli();
+            giris.Show();
+            this.Close();
         }
     }
 }

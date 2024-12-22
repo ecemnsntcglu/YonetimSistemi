@@ -113,12 +113,6 @@
     <Compile Include="Etkinlik_Bilgi.Designer.cs">
       <DependentUpon>Etkinlik_Bilgi.cs</DependentUpon>
     </Compile>
-    <Compile Include="EtkinlikEkle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EtkinlikEkle.Designer.cs">
-      <DependentUpon>EtkinlikEkle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Etkinlikler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +137,7 @@
     <Compile Include="AdminGiris.Designer.cs">
       <DependentUpon>AdminGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="KullaniciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Etkinlik_Bilgi.resx">
       <DependentUpon>Etkinlik_Bilgi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EtkinlikEkle.resx">
-      <DependentUpon>EtkinlikEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Etkinlikler.resx">
       <DependentUpon>Etkinlikler.cs</DependentUpon>

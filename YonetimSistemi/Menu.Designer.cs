@@ -36,6 +36,7 @@
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
@@ -120,12 +121,25 @@
             this.btn4.Text = "ANKARA";
             this.btn4.UseVisualStyleBackColor = true;
             // 
+            // btn_cikis
+            // 
+            this.btn_cikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_cikis.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_cikis.Location = new System.Drawing.Point(540, 331);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(167, 43);
+            this.btn_cikis.TabIndex = 8;
+            this.btn_cikis.Text = "ÇIKIŞ YAP";
+            this.btn_cikis.UseVisualStyleBackColor = true;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(777, 408);
+            this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
@@ -151,5 +165,6 @@
         private System.Windows.Forms.Button btn6;
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btn_cikis;
     }
 }

@@ -35,15 +35,16 @@
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_geri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(60, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(58, 92);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 222);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -65,20 +66,32 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(390, 63);
+            this.panel1.Location = new System.Drawing.Point(390, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 240);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_geri);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(44, 41);
+            this.panel2.Location = new System.Drawing.Point(40, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(715, 331);
+            this.panel2.Size = new System.Drawing.Size(715, 383);
             this.panel2.TabIndex = 4;
+            // 
+            // btn_geri
+            // 
+            this.btn_geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_geri.Location = new System.Drawing.Point(528, 341);
+            this.btn_geri.Name = "btn_geri";
+            this.btn_geri.Size = new System.Drawing.Size(113, 39);
+            this.btn_geri.TabIndex = 5;
+            this.btn_geri.Text = "GERİ";
+            this.btn_geri.UseVisualStyleBackColor = true;
+            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // Bilet
             // 
@@ -102,5 +115,6 @@
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_geri;
     }
 }

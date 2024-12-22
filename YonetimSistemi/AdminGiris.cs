@@ -1,12 +1,5 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace YonetimSistemi
@@ -23,16 +16,16 @@ namespace YonetimSistemi
             try
             {
                 baglanti.Open();
-                NpgsqlCommand komut1 = new NpgsqlCommand("SELECT password FROM adminler WHERE username=@username", baglanti);
+                NpgsqlCommand komut1 = new NpgsqlCommand("SELECT admin_id ,password FROM adminler WHERE username=@username", baglanti);
                 komut1.Parameters.AddWithValue("@username", txtKullanici.Text);
                 NpgsqlDataReader oku = komut1.ExecuteReader();
 
                 if (oku.Read())
                 {
                     string storedPassword = oku["password"].ToString();
+                    int admin = Convert.ToInt32(oku["admin_id"]);
                     if (storedPassword == txtSifre.Text)
                     {
-                        MessageBox.Show("Giriş başarılı!");
                         AdminMenu menu = new AdminMenu();
                         menu.Show();
                         this.Hide();

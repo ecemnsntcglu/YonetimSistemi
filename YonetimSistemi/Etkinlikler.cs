@@ -14,9 +14,9 @@ namespace YonetimSistemi
         private FlowLayoutPanel _panel;
         string etkinlik_tur;
 
-        public Etkinlikler(string filter)
+        public Etkinlikler()
         {
-            _filter = filter.ToLower();
+            _filter = GlobalVariables.filterCriteria;
             InitializeComponent();
             InitializePanel();
             LoadEvents();
@@ -29,10 +29,13 @@ namespace YonetimSistemi
                 Dock = DockStyle.Fill,
                 AutoScroll = true,
                 FlowDirection = FlowDirection.LeftToRight,
-                WrapContents = false
+                WrapContents = false,
             };
+
             this.Controls.Add(_panel);
+
         }
+
 
         private void LoadEvents()
         {
@@ -109,6 +112,8 @@ namespace YonetimSistemi
             container.Controls.Add(label);
 
             _panel.Controls.Add(container);
+           
+           
         }
 
         private void EventButton_Click(object sender, EventArgs e)
@@ -116,7 +121,8 @@ namespace YonetimSistemi
             Button clickedButton = sender as Button;
             var eventInfo = (dynamic)clickedButton.Tag;
             Etkinlik_Bilgi biletForm = new Etkinlik_Bilgi(eventInfo.etkinlikAdi, etkinlik_tur, eventInfo.tarih, eventInfo.sehir, eventInfo.resimYolu, eventInfo.salonAdi, eventInfo.enDusukFiyat);
-            biletForm.ShowDialog();
+            biletForm.Show();
+            this.Close();
         }
     }
 }

@@ -28,64 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBiletler = new System.Windows.Forms.TextBox();
+            this.textTel = new System.Windows.Forms.TextBox();
+            this.textSoyad = new System.Windows.Forms.TextBox();
+            this.textAd = new System.Windows.Forms.TextBox();
+            this.textMail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textFiyat = new System.Windows.Forms.TextBox();
             this.btn_onayla = new System.Windows.Forms.Button();
+            this.button_geri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBiletler
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBiletler.Location = new System.Drawing.Point(195, 76);
+            this.textBiletler.Name = "textBiletler";
+            this.textBiletler.Size = new System.Drawing.Size(149, 22);
+            this.textBiletler.TabIndex = 0;
             // 
-            // textBox2
+            // textTel
             // 
-            this.textBox2.Location = new System.Drawing.Point(244, 210);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
+            this.textTel.Location = new System.Drawing.Point(195, 210);
+            this.textTel.Name = "textTel";
+            this.textTel.Size = new System.Drawing.Size(149, 22);
+            this.textTel.TabIndex = 1;
             // 
-            // textBox3
+            // textSoyad
             // 
-            this.textBox3.Location = new System.Drawing.Point(244, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 2;
+            this.textSoyad.Location = new System.Drawing.Point(195, 168);
+            this.textSoyad.Name = "textSoyad";
+            this.textSoyad.Size = new System.Drawing.Size(149, 22);
+            this.textSoyad.TabIndex = 2;
             // 
-            // textBox4
+            // textAd
             // 
-            this.textBox4.Location = new System.Drawing.Point(244, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 3;
+            this.textAd.Location = new System.Drawing.Point(195, 129);
+            this.textAd.Name = "textAd";
+            this.textAd.Size = new System.Drawing.Size(149, 22);
+            this.textAd.TabIndex = 3;
             // 
-            // textBox5
+            // textMail
             // 
-            this.textBox5.Location = new System.Drawing.Point(244, 258);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 4;
+            this.textMail.Location = new System.Drawing.Point(195, 258);
+            this.textMail.Name = "textMail";
+            this.textMail.Size = new System.Drawing.Size(149, 22);
+            this.textMail.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 5;
-            this.label1.Text = "BİLETLER:";
+            this.label1.Text = "BİLET SAYISI:";
             // 
             // label2
             // 
@@ -132,12 +133,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "AD:";
             // 
-            // textBox6
+            // textFiyat
             // 
-            this.textBox6.Location = new System.Drawing.Point(244, 299);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 11;
+            this.textFiyat.Location = new System.Drawing.Point(195, 299);
+            this.textFiyat.Name = "textFiyat";
+            this.textFiyat.Size = new System.Drawing.Size(149, 22);
+            this.textFiyat.TabIndex = 11;
             // 
             // btn_onayla
             // 
@@ -149,24 +150,35 @@
             this.btn_onayla.UseVisualStyleBackColor = true;
             this.btn_onayla.Click += new System.EventHandler(this.btn_onayla_Click);
             // 
+            // button_geri
+            // 
+            this.button_geri.Location = new System.Drawing.Point(414, 377);
+            this.button_geri.Name = "button_geri";
+            this.button_geri.Size = new System.Drawing.Size(145, 35);
+            this.button_geri.TabIndex = 13;
+            this.button_geri.Text = "GERİ DÖN";
+            this.button_geri.UseVisualStyleBackColor = true;
+            this.button_geri.Click += new System.EventHandler(this.button_geri_Click);
+            // 
             // BiletOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_geri);
             this.Controls.Add(this.btn_onayla);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textFiyat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textMail);
+            this.Controls.Add(this.textAd);
+            this.Controls.Add(this.textSoyad);
+            this.Controls.Add(this.textTel);
+            this.Controls.Add(this.textBiletler);
             this.Name = "BiletOnay";
             this.Text = "BiletOnay";
             this.ResumeLayout(false);
@@ -176,18 +188,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBiletler;
+        private System.Windows.Forms.TextBox textTel;
+        private System.Windows.Forms.TextBox textSoyad;
+        private System.Windows.Forms.TextBox textAd;
+        private System.Windows.Forms.TextBox textMail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textFiyat;
         private System.Windows.Forms.Button btn_onayla;
+        private System.Windows.Forms.Button button_geri;
     }
 }

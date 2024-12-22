@@ -38,11 +38,11 @@ namespace YonetimSistemi
         {
             this.Text = $"Bilet - {_etkinlikAdi} - {_tarih}";
 
-            // Etkinlik bilgilerini label üzerinde göster
+            
             label1.Text = $"Etkinlik: {_etkinlikAdi}\nTarih: {_tarih}\nŞehir: {_sehir}\nSalon: {_salonAdi.ToUpper()}";
             label1.Font = new Font(label1.Font.FontFamily, 7, FontStyle.Bold);
 
-            // Resmi atama
+          
             switch (_etkinlik_tur.ToLower())
             {
                 case "konser":
@@ -68,7 +68,7 @@ namespace YonetimSistemi
         SELECT DISTINCT bolum 
         FROM koltuk_duzeni 
         WHERE salon_no = (SELECT salon_no FROM salonlar WHERE salon_ad = @salonAd)
-        ORDER BY bolum";  // Bölümleri alfabetik sıralıyoruz
+        ORDER BY bolum"; 
 
             try
             {
@@ -84,10 +84,10 @@ namespace YonetimSistemi
                             if (!reader.HasRows)
                             {
                                 MessageBox.Show("Bu salona ait hiçbir bölüm bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return; // Fonksiyondan çık, çünkü daha fazla işleme gerek yok
+                                return;
                             }
 
-                            int posX = 20, posY = 20, buttonSize = 60;
+                            int posX = 5, posY = 5, buttonSize = 55;
                             int padding = 10;
 
                             while (reader.Read())
@@ -109,7 +109,7 @@ namespace YonetimSistemi
                                 posX += buttonSize + padding;
                                 if (posX + buttonSize > panel1.ClientSize.Width)
                                 {
-                                    posX = 20;
+                                    posX = 5;
                                     posY += buttonSize + padding;
                                 }
                             }
@@ -135,13 +135,13 @@ namespace YonetimSistemi
         private void LoadKoltukDuzeni(string section)
         {
              biletsayisi = 0;
-            panel1.Visible = false;  // Bölüm butonları panelini gizle
+            panel1.Visible = false; 
             pictureBox1.Visible = false;
             label1.Visible = false;
 
-            panel2.Controls.Clear();  // panel2'yi temizle
+            panel2.Controls.Clear();  
 
-            // Yeni bölüm adını gösteren bir etiket ekle
+            
             System.Windows.Forms.Label label2 = new System.Windows.Forms.Label();
             label2.Text = "BÖLÜM " + section;
             label2.Location = new Point(5, 5);
@@ -177,7 +177,7 @@ namespace YonetimSistemi
                                 int koltukNo = reader.GetInt32(reader.GetOrdinal("koltuk_no"));
                                 bool durum = reader.GetBoolean(reader.GetOrdinal("durum"));
 
-                                // Koltuk bilgilerini Button'a ekleyip göster
+                               
                                 Button koltukButton = new Button
                                 { Name = $"{_bilet_id }",
                                     Width = buttonSize,
@@ -198,7 +198,6 @@ namespace YonetimSistemi
                                 }
                             }
 
-                            // Geri dönme butonunu ekle
                             posX += 5;
                             posY += 5;
                             Button geri = new Button
@@ -237,11 +236,13 @@ namespace YonetimSistemi
             panel2.Controls.Add(panel1);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(btn_geri);
             panel1.Visible = true;
             panel1.Controls.Clear();
             InitializeSections(_salonAdi);
             pictureBox1.Visible = true;
             label1.Visible = true;
+            btn_geri.Visible = true;
             LoadBiletDetails();
         }
         private void KoltukButton_Click(object sender, EventArgs e)
@@ -277,9 +278,15 @@ namespace YonetimSistemi
 
             BiletOnay biletonay = new BiletOnay(selectedKoltukIds);
             biletonay.Show();
-            this.Hide();
+            
         }
 
-       
+        private void btn_geri_Click(object sender, EventArgs e)
+        {
+           
+            Etkinlikler etkinlikler = new Etkinlikler();
+            etkinlikler.Show();
+            this.Close();
+        }
     }
 }

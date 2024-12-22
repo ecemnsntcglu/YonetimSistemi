@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_guncelle = new System.Windows.Forms.Button();
             this.btn_ekle = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -73,11 +74,23 @@
             this.btn_ekle.UseVisualStyleBackColor = true;
             this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
+            // btn_cikis
+            // 
+            this.btn_cikis.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_cikis.Location = new System.Drawing.Point(36, 293);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(126, 58);
+            this.btn_cikis.TabIndex = 7;
+            this.btn_cikis.Text = "Çıkış Yap";
+            this.btn_cikis.UseVisualStyleBackColor = true;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn_guncelle);
             this.Controls.Add(this.btn_ekle);
             this.Controls.Add(this.panel1);
@@ -94,5 +107,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_guncelle;
         private System.Windows.Forms.Button btn_ekle;
+        private System.Windows.Forms.Button btn_cikis;
     }
 }
